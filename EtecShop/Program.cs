@@ -9,6 +9,7 @@ builder.Services.AddDbContext<AppDbContext>(
     opt => opt.UseInMemoryDatabase(conn)
 );
 
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
